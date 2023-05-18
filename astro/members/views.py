@@ -26,3 +26,11 @@ def details(request, id):
 def index(request):
     template = loader.get_template('index.html')
     return HttpResponse(template.render())
+
+
+def testing(request):
+    template = loader.get_template('template.html')
+    context = {
+        'planets': ['Earth', 'Jupiter', 'Saturn'],
+    }
+    return HttpResponse(template.render(context, request))
