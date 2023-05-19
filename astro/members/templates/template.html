@@ -4,9 +4,25 @@
 
 {% for x in planets %}
   <h1>{{ x }}</h1>
+  {%empty%}
+    <h1>NO PLANETS LISTED</h1>
 {% endfor %}
 
+<h2>Hi there Astro {{lastname}}</h2>
+
+<p>{% lorem 3 p%}</p>
 <p>Simple testing page</p>
+
+{%with initial_value=0 %}
+
+<h3> The current value is: {{initial_value}}</h3>
+
+{%endwith %}
+
+<h3> The current time is: {%now "F, Y" %}</h3>
+
+<p>Simple testing page</p>
+
 
 </body>
 </html>

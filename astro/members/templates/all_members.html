@@ -10,6 +10,8 @@
 <ul>
   {% for x in mymembers %}
     <li><a href="details/{{ x.id }}">{{ x.firstname }} {{ x.lastname }}</a></li>
+  {%empty%}
+    <h2>No Members Found</h2>
   {% endfor %}
 </ul>
 

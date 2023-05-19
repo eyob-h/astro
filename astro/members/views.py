@@ -31,6 +31,8 @@ def index(request):
 def testing(request):
     template = loader.get_template('template.html')
     context = {
+        'firstname':'Victor',
+        'lastname': 'Glover',
         'planets': ['Earth', 'Jupiter', 'Saturn'],
     }
     return HttpResponse(template.render(context, request))
